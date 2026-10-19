@@ -49,6 +49,11 @@
                                 </li>
                             @endif
                         @else
+                            <!-- Enlace directo al Dashboard cuando el usuario está autenticado -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/dashboard') }}">{{ __('Dashboard') }}</a>
+                            </li>
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
